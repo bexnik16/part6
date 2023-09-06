@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.solar-system {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #000;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(255, 165, 0, 0.2);
+    animation: rotate 10s linear infinite;
+}
+
+.sun {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    top: 160px;
+    left: 160px;
+    animation: spin 3s linear infinite;
+}
+
+.planet {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.mercury {
+    background-color: #ff9966;
+    top: 10%;
+    left: 45%;
+    animation: orbit 4s linear infinite;
+}
+
+.venus {
+    background-color: #ff9900;
+    top: 10%;
+    left: 25%;
+    animation: orbit 7s linear infinite;
+}
+
+.earth {
+    background-color: #0099cc;
+    top: 10%;
+    left: 60%;
+    animation: orbit 12s linear infinite;
+}
+
+.mars {
+    background-color: #ff6600;
+    top: 10%;
+    left: 10%;
+    animation: orbit 20s linear infinite;
+}
+
+.jupiter {
+    background-color: #ff9900;
+    top: 10%;
+    left: 75%;
+    animation: orbit 30s linear infinite;
+}
+
+.saturn {
+    background-color: #ffcc00;
+    top: 10%;
+    left: 40%;
+    animation: orbit 45s linear infinite;
+}
+
+.uranus {
+    background-color: #66ccff;
+    top: 10%;
+    left: 90%;
+    animation: orbit 60s linear infinite;
+}
+
+.neptune {
+    background-color: #3333cc;
+    top: 10%;
+    left: 5%;
+    animation: orbit 80s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
